@@ -1,0 +1,27 @@
+{
+  "name": "algorithmvisualizer",
+  "version": "1.0.0",
+  "description": "Algorithm Visualization Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuyashJoshi179/AlgorithmVisualizer.git"
+  },
+  "author": "Suyash Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuyashJoshi179/AlgorithmVisualizer/issues"
+  },
+  "homepage": "https://github.com/SuyashJoshi179/AlgorithmVisualizer#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1",
+    "lite-server": "^2.6.1",
+    "popper.js": "^1.16.1"
+  }
+}

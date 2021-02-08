@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
         <div class="container">
             <button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -26,21 +26,35 @@
 
             <div class="collapse navbar-collapse" id="Navbar">
                 <a href="#" class="navbar-brand"><img src="img/Algo.png" height="30" width="41"></a>
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="bi bi-house-door"></span>Home</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="bi bi-lightning" ></span>Compare</a>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="bi bi-lightning" ></span>Compare</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false"><span class="bi bi-dice-6"></span>Miscellaneous</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">Newtons Physics</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Chemistry</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">Maths</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="bi bi-dice-6"></span>Miscellaneous</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span class="bi bi-info-circle"></span>About</a></li>
                 </ul>
+
             </div>
         </div>
     </nav>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-6">
+                <div class="col-12 col-sm-6 " id="header">
                     <h1>Algo Visualizer</h1>
                     <p>Let's Visualize!</p>
                 </div>

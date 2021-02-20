@@ -3,3 +3,14 @@
     
 }
 
+#mybox {
+    border-color: black;
+    background-color: red;
+    padding-bottom: 10px;
+}
+
+#mybox_1{
+    border-color: black;
+    background-color: black;
+}
+

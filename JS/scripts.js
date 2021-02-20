@@ -10,3 +10,8 @@ $(".card").hover(function(){
     }, function(){
     $(this).css("box-shadow", "0 0 0");
   });
+
+
+
+
+  

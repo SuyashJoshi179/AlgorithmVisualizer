@@ -10,3 +10,8 @@ All the teammates, Follow these instructions -
     iii) JS/scripts.js is main JS file
         You can add new supplementry CSS/JS files in the respective folders.
 7) Let's Start!!!
+
+Branches -
+1) Master - changes pull & merge.
+2) Interactive - Merge changes.
+3) Indivisual - group/member.

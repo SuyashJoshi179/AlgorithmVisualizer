@@ -1,0 +1,10 @@
+.interactive-cont {
+    margin-top: 100px;
+}
+#graph {
+    height: 400px;
+}
+
+.bar {
+    fill: steelblue;
+}

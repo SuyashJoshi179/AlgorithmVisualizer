@@ -105,8 +105,9 @@ setInterval(() => {
 function drawhist(arr)
 {
     console.log(arr);
-
+    console.log( 'before: ',data);
     data = data.map((x) => ({ index: arr.indexOf(x.value), value: x.value }));
+    console.log('after: ',data);
     x.domain(data.map(function (d) { return d.index; }));
     y.domain([0, d3.max(data, function (d) { return d.value; }) * 1.05]);
     g.selectAll(".bar")
@@ -116,3 +117,5 @@ function drawhist(arr)
         .attr("x", function (d) { return x(d.index); })
 
 }
+
+setTimeout(() => drawhist([1,2,3,4,5,6,7]), 2000);

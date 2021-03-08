@@ -105,10 +105,10 @@ setInterval(() => {
 function drawhist(arr)
 {
     console.log(arr);
-    console.log( 'before: ',data);
-    data = data.map((x) => ({ index: arr.indexOf(x.value), value: x.value }));
-    console.log('after: ',data);
-    x.domain(data.map(function (d) { return d.index; }));
+    //console.log( 'before: ',data);
+    //data = data.map((x) => ({ index: arr.indexOf(x.value), value: x.value }));
+    //console.log('after: ',data);
+    x.domain(arr.map(function (d) { return data.filter(x => x.value === d)[0].index; }));
     y.domain([0, d3.max(data, function (d) { return d.value; }) * 1.05]);
     g.selectAll(".bar")
         .transition()

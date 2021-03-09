@@ -1,13 +1,13 @@
 //google.charts.load('current', { 'packages': ['corechart'] });
 //google.charts.setOnLoadCallback(drawhist);
 
-let data = [{ index: 0, value: 1 }
-    , { index: 1, value: 3 }
-    , { index: 2, value: 2 }
-    , { index: 3, value: 6 }
-    , { index: 4, value: 4 }
-    , { index: 5, value: 5 }
-    , { index: 6, value: 7 }]
+let data = [{ index: 0, value: 7 }
+    , { index: 1, value: 6 }
+    , { index: 2, value: 5 }
+    , { index: 3, value: 4 }
+    , { index: 4, value: 3 }
+    , { index: 5, value: 2 }
+    , { index: 6, value: 1 }]
 
 var svg = d3.select("svg"),
     width = $('svg').width() - 100//svg.attr("width") + 100,
@@ -118,4 +118,27 @@ function drawhist(arr)
 
 }
 
-setTimeout(() => drawhist([1,2,3,4,5,6,7]), 2000);
+function test(i, inputArr, n) {
+    if(i<n) {
+        let current = inputArr[i];
+            
+        let j = i-1; 
+        while ((j > -1) && (current < inputArr[j])) {
+            inputArr[j+1] = inputArr[j];
+            j--;
+        }
+        inputArr[j+1] = current;
+        drawhist(inputArr);
+        console.log("InputArr: ", inputArr);
+        setTimeout(test, 2000, i+1, inputArr, n);
+    }
+}
+
+function insertionSort(inputArr) {
+
+    let n = inputArr.length;
+    test(1, inputArr, n);
+    console.log("Completed..")
+    return inputArr;
+}
+setTimeout(() => insertionSort([7,6,5,4,3,2,1]), 2000);

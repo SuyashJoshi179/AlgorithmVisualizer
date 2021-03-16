@@ -141,4 +141,4 @@ function insertionSort(inputArr) {
     console.log("Completed..")
     return inputArr;
 }
-setTimeout(() => insertionSort([7,6,5,4,3,2,1]), 2000);
+setTimeout(() => insertionSort(data.map(x => x.value)) , 2000);

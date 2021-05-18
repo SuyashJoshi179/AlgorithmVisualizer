@@ -1,13 +1,37 @@
 //google.charts.load('current', { 'packages': ['corechart'] });
 //google.charts.setOnLoadCallback(drawhist);
 
-let data = [{ index: 0, value: 7 }
+
+
+/*let data = [{ index: 0, value: 7 }
     , { index: 1, value: 6 }
     , { index: 2, value: 5 }
-    , { index: 3, value: 4 }
+    , { index: 3, value: 15 }
     , { index: 4, value: 3 }
     , { index: 5, value: 2 }
-    , { index: 6, value: 1 }]
+    , { index: 6, value: 1 }
+    , { index: 7 , value: 5}
+]*/
+
+let lis = []
+let data = []
+
+let n = 5 + Math.floor(Math.random()*11)
+
+while(lis.length < n)
+{
+    let val = Math.floor(1+Math.random()*20)
+
+    if(lis.indexOf(val) == -1)
+    {
+        lis.push(val)
+    }
+}
+
+for(i=0; i<n; i++) {data.push({index:i,value:lis[i]})}
+console.log(data)
+
+
 
 var svg = d3.select("svg"),
     width = $('svg').width() - 100//svg.attr("width") + 100,
@@ -118,7 +142,16 @@ function drawhist(arr)
 
 }
 
-function test(i, inputArr, n) {
+
+var timervalue;
+var steps = 0;
+var i = 0;
+var mystates = [];
+
+
+
+function test(inputArr, n) {
+    i = i + 1;
     if(i<n) {
         let current = inputArr[i];
             
@@ -128,17 +161,50 @@ function test(i, inputArr, n) {
             j--;
         }
         inputArr[j+1] = current;
+
+        var temp = [];
+        for(var newtemp=0; newtemp<n; newtemp++) temp.push(inputArr[newtemp]);
+
+        mystates.push(temp);
+
         drawhist(inputArr);
         console.log("InputArr: ", inputArr);
-        setTimeout(test, 2000, i+1, inputArr, n);
+        timervalue = setTimeout(test, 1000, inputArr, n);
     }
 }
+
+
 
 function insertionSort(inputArr) {
 
     let n = inputArr.length;
-    test(1, inputArr, n);
+    test(inputArr, n);
     console.log("Completed..")
     return inputArr;
 }
-setTimeout(() => insertionSort([7,6,5,4,3,2,1]), 2000);
+
+document.getElementById("button1").addEventListener("click",function(){
+    lis = insertionSort(lis);
+});
+
+document.getElementById("button2").addEventListener("click",function(){
+    clearTimeout(timervalue);
+});
+
+document.getElementById("button3").addEventListener("click",function(){
+    lis = insertionSort(lis);
+    clearTimeout(timervalue);
+});
+
+document.getElementById("button4").addEventListener("click",function(){
+    console.log(mystates);
+
+    drawhist(mystates[mystates.length-1]);
+    mystates.pop();
+    i -= 1;
+});
+
+
+
+
+

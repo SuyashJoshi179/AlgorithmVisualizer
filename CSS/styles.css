@@ -21,3 +21,9 @@ body {
     border-color: black;
     background-color: black;
 }
+
+
+.jumbotron {
+    background-color: #22292F;
+    color: floralwhite
+}

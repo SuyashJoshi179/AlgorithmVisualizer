@@ -144,7 +144,7 @@ function colorate(inputArr, red = -1, border = -1) {
     g.selectAll(".bar")
         .attr("style", (d) => {
             console.log("Check: ", d.index === border);
-            return(d.index === red ? "fill: red; " : "fill: steelblue; " + (d.index === border ? "outline: thin solid red;" : "outline: 0px solid steelblue;"));
+            return(d.index === red ? "fill: red; " : "fill: steelblue; " + (d.index === border ? "outline: 3px solid red;" : "outline: 0px solid steelblue;"));
         })
 }
 

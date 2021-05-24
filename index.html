@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>Algo Visualizer</title>
 </head>
 
@@ -24,12 +23,15 @@
             <div class="collapse navbar-collapse" id="Navbar">
                 <a href="#" class="navbar-brand"><img src="img/Algo.png"><b> Algo Visualizer</b></a>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="bi bi-house-door"></span>Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span
+                                class="bi bi-house-door"></span>Home</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="bi bi-lightning" ></span>Compare</a>
+                        <a class="nav-link" href="#"><span class="bi bi-lightning"></span>Compare</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="bi bi-dice-6"></span>Miscellaneous</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="bi bi-info-circle"></span>About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span
+                                class="bi bi-dice-6"></span>Miscellaneous</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="bi bi-info-circle"></span>About</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -41,9 +43,10 @@
                     <h1>Algo Visualizer</h1>
                     <p>Let's Visualize!</p>
                 </div>
-                <div class="col-12 col-sm-6">
-                  <lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_kwjwqk59.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-              </div>
+                <div class="col-12 col-sm-6 overflow-hidden">
+                    <lottie-player src="animation.json" background="transparent" class="float-right" speed="1"
+                        style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+                </div>
             </div>
         </div>
     </header>
@@ -57,7 +60,7 @@
         <div>
             <div class="row row-cols-1 row-cols-md-5 g-4">
                 <div class="col py-4">
-                    <div class="card" id="mybox">
+                    <div class="card">
                         <img src="./img/DFS.png" class="card-img-top" alt="...">
 
                         <div class="card-body">
@@ -68,7 +71,7 @@
                     </div>
                 </div>
                 <div class="col py-4">
-                    <div class="card" id="mybox">
+                    <div class="card">
                         <img src="./img/BFS.png" class="card-img-top" alt="...">
 
                         <div class="card-body">
@@ -79,7 +82,7 @@
                     </div>
                 </div>
                 <div class="col py-4">
-                    <div class="card" id="mybox" style="padding-bottom: 35px;">
+                    <div class="card">
                         <img src="./img/Dijkstra-Algorithm.png" class="card-img-top" alt="...">
 
                         <div class="card-body">
@@ -90,7 +93,7 @@
                     </div>
                 </div>
                 <div class="col py-4">
-                    <div class="card" id="mybox" style="padding-bottom: 35px;">
+                    <div class="card">
                         <img src="./img/PRIMS-ALGORITHM.png" class="card-img-top" alt="...">
 
                         <div class="card-body">
@@ -101,7 +104,7 @@
                     </div>
                 </div>
                 <div class="col py-4">
-                    <div class="card" id="mybox" style="padding-bottom: 35px;">
+                    <div class="card">
                         <img src="./img/kruskals-algorithm-in-algoritms-65-638.jpg" class="card-img-top" alt="...">
 
                         <div class="card-body">
@@ -121,7 +124,7 @@
             <div>
                 <div class="row row-cols-1 row-cols-md-5 g-4">
                     <div class="col py-4">
-                        <div class="card" id="mybox_1">
+                        <div class="card">
                             <img src="./img/insertion.jpg" class="card-img-top" alt="...">
 
                             <div class="card-body">
@@ -132,7 +135,7 @@
                         </div>
                     </div>
                     <div class="col py-4">
-                        <div class="card" id="mybox_1" style="padding-bottom: 25px;">
+                        <div class="card">
                             <img src="./img/sele.png" class="card-img-top" alt="...">
 
                             <div class="card-body">
@@ -143,7 +146,7 @@
                         </div>
                     </div>
                     <div class="col py-4">
-                        <div class="card" id="mybox_1" style="padding-bottom: 25px;">
+                        <div class="card">
                             <img src="./img/merge.png" class="card-img-top" alt="...">
 
                             <div class="card-body">
@@ -154,7 +157,7 @@
                         </div>
                     </div>
                     <div class="col py-4">
-                        <div class="card" id="mybox_1" style="padding-bottom: 25px;">
+                        <div class="card">
                             <img src="./img/Quicksort.png" class="card-img-top" alt="...">
 
                             <div class="card-body">
@@ -165,7 +168,7 @@
                         </div>
                     </div>
                     <div class="col py-4">
-                        <div class="card" id="mybox_1" style="padding-bottom: 25px;">
+                        <div class="card">
                             <img src="./img/count.png" class="card-img-top" alt="...">
 
                             <div class="card-body">
@@ -195,6 +198,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lottie-player.js"></script>
     <script src="JS/scripts.js"></script>
 </body>
 

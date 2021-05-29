@@ -1,0 +1,38 @@
+.interactive-cont {
+    margin-top: 100px;
+}
+
+#graph {
+    height: 400px;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+#code {
+    border: 2px solid #000000;
+}
+
+.button {
+    padding: 5px 15px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #050505;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #999;
+}
+
+.button:hover {
+    background-color: #67c6d6
+}
+
+.button:active {
+    background-color: #000000;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}

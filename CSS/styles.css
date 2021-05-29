@@ -26,3 +26,17 @@ body {
 lottie-player {
     margin: -150px -100px -150px -100px;
 }
+
+@keyframes mymove {
+    0% {padding-top: 0px; padding-bottom: 50px;}    
+    50% {padding-top: 50px; padding-bottom: 0px;}
+    100% {padding-top: 0px; padding-bottom: 50px;}
+  }
+
+@keyframes togglr {
+    
+}
+
+.titlename {
+    animation: mymove 4s infinite cubic-bezier(0.4, 0, 0.2, 1);;
+}

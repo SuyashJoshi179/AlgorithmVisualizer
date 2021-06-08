@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.about-section {
+    padding: 70px 50px 50px 50px;
+    text-align: center;
+    background-color: #22292F;
+    color: white;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 25%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-google {
+    background: #ffffff;
+    color: rgb(230, 16, 16);
+}
+
+.fa-linkedin {
+    background: #ffffff;
+    color: rgb(74, 117, 211);
+}
+
+.fa-instagram {
+    background: #ebeef0;
+    color: rgb(200, 93, 204);
+}
+
+.fa-github {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.image {
+    width: 25%;
+    border-radius: 50%;
+    border: 8px solid rgb(255, 255, 255);
+}
+
+.footer {
+    color: white;
+    background-color: black;
+    padding-bottom: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
